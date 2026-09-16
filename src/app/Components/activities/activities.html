@@ -1,0 +1,40 @@
+<section class="activities-section" id="activities">
+  <div class="activities-container">
+    <!-- SECTION HEADER (Matching Reference Image) -->
+    <div class="activities-header">
+      <h2 class="activities-main-title">
+        EDUCATION MEETS THE <span class="title-accent">CO-CURRICULARS</span>
+      </h2>
+      <p class="activities-subtitle">
+        HYBRID SCHOOLS NURTURES THE NEXT GENERATION OF LEADERS, MUSICIANS, ATHLETES AND INNOVATORS.
+      </p>
+    </div>
+
+    <!-- ACTIVITIES CONTINUOUS SCROLL MARQUEE -->
+    <div class="activities-marquee-wrap">
+      <div class="activities-marquee-track">
+        <!-- FIRST SET -->
+        <div class="activity-card rounded-4" *ngFor="let item of activities">
+          <div class="activity-image-wrap rounded-4">
+            <img [src]="item.image" [alt]="item.title" loading="lazy">
+          </div>
+          <div class="activity-info">
+            <h3 class="activity-name">{{ item.title }}</h3>
+            <p class="activity-desc">{{ item.description }}</p>
+          </div>
+        </div>
+
+        <!-- SECOND DUPLICATE SET (For Seamless Infinite Loop) -->
+        <div class="activity-card" *ngFor="let item of activities" aria-hidden="true">
+          <div class="activity-image-wrap">
+            <img [src]="item.image" [alt]="item.title" loading="lazy">
+          </div>
+          <div class="activity-info">
+            <h3 class="activity-name">{{ item.title }}</h3>
+            <p class="activity-desc">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

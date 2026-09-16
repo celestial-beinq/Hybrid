@@ -1,0 +1,32 @@
+<section class="gallery-section" id="campus-life">
+  <div class="gallery-container">
+    <!-- SECTION HEADER -->
+    <div class="gallery-header">
+      <span class="gallery-eyebrow">SCHOOL GALLERY</span>
+      <h2 class="gallery-main-title">LIFE AT HYBRID SCHOOLS</h2>
+      <p class="gallery-subtitle">
+        Explore memorable moments across academic discoveries, sports championships, leadership debates, and creative
+        arts.
+      </p>
+
+      <!-- FILTER TABS -->
+
+    </div>
+
+    <!-- PHOTO GRID -->
+    <div class="gallery-grid">
+      <div class="gallery-item rounded-3" *ngFor="let item of filteredItems" [ngClass]="item.spanClass">
+        <div class="gallery-image-box rounded-2">
+          <img [src]="item.image" [alt]="item.title" loading="lazy" class="rounded-2">
+          <div class="gallery-overlay">
+            <span class="gallery-category-tag">{{ item.categoryLabel }}</span>
+            <h3 class="gallery-card-heading">{{ item.title }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHOOL TOUR INVITATION BANNER -->
+
+  </div>
+</section>

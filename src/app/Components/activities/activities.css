@@ -1,0 +1,193 @@
+/* =========================================
+   EXTRA-CURRICULAR ACTIVITIES SECTION
+   (Matching Reference Showcase Design)
+   ========================================= */
+
+.activities-section {
+  position: relative;
+  background-color: #faf9f5;
+  padding: clamp(4.5rem, 8vh, 7rem) 1.5rem clamp(5rem, 8vh, 7.5rem);
+  color: #0f172a;
+  border-top: 1px solid #f0eee6;
+  border-bottom: 1px solid #ede9df;
+}
+
+.activities-container {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------
+   HEADER (Exact Reference Typography)
+   ----------------------------------------- */
+.activities-header {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto clamp(3rem, 5vw, 4.5rem);
+}
+
+.activities-main-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(2.2rem, 5.2vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: #111827;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title-accent {
+  color: #f59e0b;
+  display: inline-block;
+}
+
+.activities-subtitle {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: clamp(0.75rem, 1.1vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  margin: 1rem 0 0 0;
+  line-height: 1.5;
+}
+
+/* -----------------------------------------
+   ACTIVITIES CONTINUOUS SCROLL MARQUEE
+   ----------------------------------------- */
+.activities-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0.5rem 0 2rem;
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+.activities-marquee-track {
+  display: flex;
+  gap: 1.75rem;
+  width: max-content;
+  animation: activitiesMarquee 25s linear infinite;
+  will-change: transform;
+}
+
+.activities-marquee-wrap:hover .activities-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes activitiesMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.activity-card {
+  width: 320px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0px;
+  padding: 0.85rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+}
+
+/* IMAGE WRAPPER (Square, Clean Frame) */
+.activity-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0px;
+  background-color: #f1f5f9;
+}
+
+.activity-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activity-card:hover .activity-image-wrap img {
+  transform: scale(1.06);
+}
+
+/* BADGE */
+.activity-category-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+/* INFO */
+.activity-info {
+  padding: 1.15rem 0.35rem 0.45rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-name {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 850;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.25;
+}
+
+.activity-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* -----------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   ----------------------------------------- */
+@media (max-width: 640px) {
+  .activities-section {
+    padding: 3.5rem 1.25rem 4rem;
+  }
+
+  .activity-card {
+    width: 275px;
+    padding: 0.75rem;
+  }
+
+  .activities-marquee-track {
+    gap: 1.25rem;
+    animation-duration: 20s;
+  }
+}

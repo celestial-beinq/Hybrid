@@ -1,0 +1,206 @@
+<main class="about-page-main">
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT HERO (WITH INTEGRATED FLOATING NAVBAR)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="about-hero">
+    <!-- BACKGROUND PHOTO & OVERLAY -->
+    <div class="about-hero-bg" style="background-image: url('images/IMG_4343.JPG')"></div>
+    <div class="about-hero-overlay"></div>
+
+    <!-- FLOATING NAVBAR AS PART OF HERO -->
+    <app-navbar></app-navbar>
+
+    <div class="about-hero-content-wrapper">
+      <div class="container about-hero-container">
+        <!-- HERO BADGE -->
+
+
+        <!-- LARGE BOLD HEADLINE -->
+        <h1 class="about-hero-title">
+          HYBRID SCHOOL OF
+          <br>
+          <span class="title-highlight">EXCELLENCE</span>
+        </h1>
+
+        <p class="about-hero-subtext">
+          Nurturing intellectual brilliance, moral leadership, and future-ready innovation in Iyana - Ejigbo, Lagos
+          State since 2010.
+        </p>
+
+        <!-- TILTED BADGE WITH ARROW AND SWOOSH -->
+        <div class="portal-badge-container">
+          <a href="https://www.schoolcard.com.ng" target="_blank" rel="noopener noreferrer"
+            class="portal-sticker-badge">
+            <span class="badge-pill">STUDENT &amp; PARENT PORTAL</span>
+            <span class="badge-arrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- PLAYFUL HAND-DRAWN SWOOSH LINE -->
+          <svg class="badge-swoosh-doodle" width="70" height="46" viewBox="0 0 70 46" fill="none" aria-hidden="true">
+            <path d="M 2 24 C 16 38, 42 42, 54 22 C 60 11, 48 2, 40 8 C 34 13, 38 24, 52 18 C 58 15, 62 10, 60 4"
+              stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- KEY STATS STRIP -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of stats">
+          <div class="stat-icon-wrap">
+            <i [class]="'bi ' + stat.icon"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAL'S WELCOME MESSAGE -->
+  <section class="principal-section">
+    <div class="container">
+      <div class="principal-grid">
+        <div class="principal-image-wrap">
+          <div class="image-frame">
+            <img src="images/IMG_4344.JPG" alt="HYBRID SCHOOLS Students and Faculty" class="principal-img"
+              loading="lazy">
+            <div class="experience-badge">
+              <span class="exp-number">15+</span>
+              <span class="exp-text">Years of Proven Excellence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="principal-content">
+          <span class="section-eyebrow">WELCOME TO HYBRID SCHOOLS</span>
+          <h2 class="section-heading">A Word From Our Principal</h2>
+          <p class="lead-quote">
+            "At HYBRID SCHOOLS, we believe every child is endowed with unique brilliance. Our mission is to ignite that
+            potential through disciplined scholarship, personal mentorship, and a global worldview."
+          </p>
+          <div class="quote-body">
+            <p>
+              Founded with the vision to raise leaders of intellect and character, our institution offers an environment
+              where young men and women discover their passions. Whether in our state-of-the-art robotics laboratory,
+              our Olympic-standard sports arena, or through the eloquence of our debating chambers, we prepare students
+              not merely to pass examinations, but to conquer life.
+            </p>
+            <p>
+              We celebrate our consistent 100% pass rates in WAEC, NECO, and Cambridge IGCSE, but we take equal pride in
+              our alumni who demonstrate moral courage, empathy, and entrepreneurial zeal wherever they go.
+            </p>
+          </div>
+
+          <div class="principal-signature-block">
+            <div class="sig-details">
+              <h3 class="sig-name">Dr. (Mrs.) Adebayo Olufunke</h3>
+              <span class="sig-title">Principal &amp; Head of College · HYBRID SCHOOLS, Lagos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-pillars></app-pillars>
+
+
+
+  <!-- CORE VALUES & HYBRID ADVANTAGES (REBRANDED) -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-eyebrow">THE HYBRID ADVANTAGE</span>
+        <h2 class="section-heading">Why Choose HYBRID SCHOOLS</h2>
+        <p class="section-subtext">
+          Our holistic educational model blends rigorous global curricula, STEM innovation, and values-driven mentorship
+          to inspire lifelong leadership.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-item" *ngFor="let val of values">
+          <div class="value-icon">
+            <i [class]="'bi ' + val.icon"></i>
+          </div>
+          <h3 class="value-title">{{ val.title }}</h3>
+          <p class="value-desc">{{ val.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCREDITATIONS & PARTNERS -->
+  <section class="accreditation-section">
+    <div class="container">
+      <div class="accred-box">
+        <div class="accred-left">
+          <div class="accred-pulse-badge">
+            <span class="pulse-dot"></span>
+            <span>ADMISSIONS OPEN</span>
+          </div>
+          <h2 class="accred-hero-heading">Ready to Begin Your Child's Journey?</h2>
+          <p class="accred-hero-desc">
+            Admissions are ongoing for Crèche, Kindergarten, Nursery, JSS and SSS Classes Take the first step toward
+            world-class academic and leadership preparation.
+          </p>
+
+          <div class="accred-cta-actions">
+            <a routerLink="/contact" class="btn-accred-primary">
+              <span>Apply Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+        <div class="accred-badges-grid">
+          <div class="accred-badge">
+            <i class="bi bi-award-fill"></i>
+            <div class="badge-text">
+              <strong>WAEC / WASSCE</strong>
+              <span>Certified Centre</span>
+            </div>
+          </div>
+          <div class="accred-badge">
+            <i class="bi bi-patch-check-fill"></i>
+            <div class="badge-text">
+              <strong>NECO / SSCE</strong>
+              <span>Accredited Centre</span>
+            </div>
+          </div>
+          <div class="accred-badge">
+            <i class="bi bi-globe-americas"></i>
+            <div class="badge-text">
+              <strong>Cambridge IGCSE</strong>
+              <span>International Examination</span>
+            </div>
+          </div>
+          <div class="accred-badge">
+            <i class="bi bi-mortarboard-fill"></i>
+            <div class="badge-text">
+              <strong>JAMB / SAT / IELTS</strong>
+              <span>Prep &amp; Testing Hub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,233 @@
+<main class="contact-page-main">
+
+  <!-- ═══════════════════════════════════════════════════════
+       1. CONTACT HERO (WITH INTEGRATED FLOATING NAVBAR)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="contact-hero">
+    <!-- BACKGROUND PHOTO & OVERLAY -->
+    <div class="contact-hero-bg" style="background-image: url('images/campus-library.jpg')"></div>
+    <div class="contact-hero-overlay"></div>
+
+    <!-- FLOATING NAVBAR AS PART OF HERO -->
+    <app-navbar></app-navbar>
+
+    <div class="contact-hero-content-wrapper">
+      <div class="container contact-hero-container">
+
+
+        <!-- LARGE BOLD HEADLINE -->
+        <h1 class="contact-hero-title">
+          CONNECT WITH
+          <br>
+          <span class="title-highlight">HYBRID SCHOOLS</span>
+        </h1>
+
+        <p class="contact-hero-subtext">
+          Have questions about 2026/2027 admissions, curriculum, entrance screening, or guided campus tours? Our
+          dedicated admissions team in Iyana - Ejigbo, Lagos State is here to assist you.
+        </p>
+
+        <!-- TILTED BADGE WITH ARROW AND SWOOSH -->
+        <div class="portal-badge-container">
+          <a href="#message-section" class="portal-sticker-badge">
+            <span class="badge-pill">SEND US A MESSAGE TODAY</span>
+            <span class="badge-arrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- PLAYFUL HAND-DRAWN SWOOSH LINE -->
+          <svg class="badge-swoosh-doodle" width="70" height="46" viewBox="0 0 70 46" fill="none" aria-hidden="true">
+            <path d="M 2 24 C 16 38, 42 42, 54 22 C 60 11, 48 2, 40 8 C 34 13, 38 24, 52 18 C 58 15, 62 10, 60 4"
+              stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       2. MAIN CONTACT SECTION (USER SCREENSHOT LAYOUT)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="secure-contact-section" id="message-section">
+    <div class="container">
+      <div class="secure-contact-grid">
+
+        <!-- LEFT COLUMN: 4 STACKED INFO CARDS -->
+        <aside class="contact-info-stack">
+          <!-- CARD 1: HEAD OFFICE -->
+          <a href="https://maps.google.com/?q=12+Admiralty+Way+Lekki+Phase+1+Lagos+Nigeria" target="_blank"
+            rel="noopener noreferrer" class="info-card-item">
+            <div class="info-icon-badge badge-orange">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="info-card-content">
+              <h3 class="info-card-title">Head Office</h3>
+              <p class="info-card-text">15/7, Falana Street, Off Killa Bus Stop Iyana - Ejigbo, Lagos State.</p>
+            </div>
+          </a>
+
+          <!-- CARD 2: EMAIL PROTOCOL -->
+          <a href="mailto:info@hybridschools.edu.ng" class="info-card-item">
+            <div class="info-icon-badge badge-emerald">
+              <i class="bi bi-envelope-at-fill"></i>
+            </div>
+            <div class="info-card-content">
+              <h3 class="info-card-title">Email Protocol</h3>
+              <p class="info-card-text">
+                <span>admissions&#64;hybridschools.edu.ng</span>
+                <span>info&#64;hybridschools.edu.ng</span>
+              </p>
+            </div>
+          </a>
+
+          <!-- CARD 3: DIRECT LINE -->
+          <a href="tel:08056719403" class="info-card-item">
+            <div class="info-icon-badge badge-amber">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="info-card-content">
+              <h3 class="info-card-title">Direct Line</h3>
+              <p class="info-card-text">
+                <span class="highlight-contact">+234 (816) 690-0123</span>
+                <span>Mon–Sat | 8am – 5pm WAT</span>
+              </p>
+            </div>
+          </a>
+
+          <!-- CARD 4: WHATSAPP -->
+          <a href="https://wa.me/2348166900123" target="_blank" rel="noopener noreferrer" class="info-card-item">
+            <div class="info-icon-badge badge-green">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <div class="info-card-content">
+              <h3 class="info-card-title">Whatsapp</h3>
+              <p class="info-card-text">
+                <span class="highlight-contact">+234 (816) 690-0123</span>
+                <span>Mon–Sat | 8am – 5pm WAT</span>
+              </p>
+            </div>
+          </a>
+        </aside>
+
+        <!-- RIGHT COLUMN: SEND A SECURE MESSAGE CARD -->
+        <div class="secure-form-card">
+          <div class="form-header-block">
+            <h2 class="secure-form-title">Send a Secure Message</h2>
+            <p class="secure-form-subtitle">All sensitive information is encrypted before transmission.</p>
+          </div>
+
+          <!-- SUCCESS NOTIFICATION -->
+          <div class="secure-success-banner" *ngIf="submitted">
+            <div class="success-icon-wrap">
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <div class="success-text-wrap">
+              <h4>Message Sent Successfully!</h4>
+              <p>Thank you for contacting HYBRID SCHOOLS. Our admissions registrar will reach out to you within 24
+                hours.</p>
+              <button class="btn-resend-prompt" (click)="resetForm()" type="button">Send Another Message</button>
+            </div>
+          </div>
+
+          <!-- FORM BODY -->
+          <form (ngSubmit)="onSubmit()" *ngIf="!submitted" class="secure-form-body">
+            <!-- ROW 1: FULL NAME & EMAIL ADDRESS -->
+            <div class="form-row-duo">
+              <div class="form-field-group">
+                <label for="parentName">Full Name <span class="asterisk">*</span></label>
+                <input type="text" id="parentName" name="parentName" [(ngModel)]="formData.parentName"
+                  placeholder="e.g. Chief & Mrs. Adeleke" required class="secure-input" />
+              </div>
+
+              <div class="form-field-group">
+                <label for="email">Email Address <span class="asterisk">*</span></label>
+                <input type="email" id="email" name="email" [(ngModel)]="formData.email" placeholder="name@example.com"
+                  required class="secure-input" />
+              </div>
+            </div>
+
+            <!-- ROW 2: PHONE NUMBER & PURPOSE -->
+            <div class="form-row-duo">
+              <div class="form-field-group">
+                <label for="phone">Phone Number <span class="asterisk">*</span></label>
+                <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone" placeholder="+234 816 690 0123"
+                  required class="secure-input" />
+              </div>
+
+              <div class="form-field-group">
+                <label for="inquiryType">Inquiry Purpose</label>
+                <select id="inquiryType" name="inquiryType" [(ngModel)]="formData.inquiryType"
+                  class="secure-input secure-select">
+                  <option value="admission">Admissions (New Student)</option>
+                  <option value="transfer">Transfer Student (JSS 2 / SSS 1)</option>
+                  <option value="tour">Schedule a Private Campus Tour</option>
+                  <option value="scholarship">Entrance Exam &amp; Scholarships</option>
+                  <option value="general">General Administrative Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- ROW 3: CHILD'S PROPOSED CLASS -->
+            <div class="form-field-group">
+              <label for="studentGrade">Child's Proposed Grade/Class</label>
+              <select id="studentGrade" name="studentGrade" [(ngModel)]="formData.studentGrade"
+                class="secure-input secure-select">
+                <option value="JSS 1">Junior Secondary School 1 (JSS 1 / Grade 7)</option>
+                <option value="JSS 2">Junior Secondary School 2 (JSS 2 / Grade 8)</option>
+                <option value="JSS 3">Junior Secondary School 3 (JSS 3 / Grade 9)</option>
+                <option value="SSS 1 Science">Senior Secondary 1 - Science &amp; STEM Track</option>
+                <option value="SSS 1 Arts">Senior Secondary 1 - Arts &amp; Humanities Track</option>
+                <option value="SSS 1 Commercial">Senior Secondary 1 - Commercial Business Track</option>
+                <option value="SSS 2 Transfer">Senior Secondary 2 (Transfer Candidate)</option>
+              </select>
+            </div>
+
+            <!-- ROW 4: MESSAGE -->
+            <div class="form-field-group">
+              <label for="message">How can we help you? <span class="asterisk">*</span></label>
+              <textarea id="message" name="message" [(ngModel)]="formData.message" rows="4"
+                placeholder="Type your message, questions, or specific requirements here..." required
+                class="secure-input secure-textarea"></textarea>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" [disabled]="submitting" class="btn-secure-submit">
+              <span *ngIf="!submitting">Send Message</span>
+              <span *ngIf="submitting">Sending Message...</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       3. INTERACTIVE SCHOOL MAP
+       ═══════════════════════════════════════════════════════ -->
+  <section class="campus-map-section">
+    <div class="container">
+      <div class="map-showcase-box">
+        <div class="map-iframe-container">
+          <iframe title="HYBRID SCHOOLS Lekki Phase 1 Lagos Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.261274577884!2d3.4682496!3d6.452668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf45300000001%3A0x6b4efbb112345678!2sAdmiralty%20Way%2C%20Lekki%20Phase%201%2C%20Lagos!5e0!3m2!1sen!2sng!4v1694000000000!5m2!1sen!2sng"
+            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</main>
+
+<app-footer></app-footer>

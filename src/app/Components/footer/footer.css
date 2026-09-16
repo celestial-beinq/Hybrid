@@ -1,0 +1,283 @@
+/* =========================================
+   HYBRID SCHOOLS - SIMPLE FOOTER
+   ========================================= */
+
+.site-footer {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  padding: clamp(2.5rem, 4vh, 3.5rem) 1.5rem 1rem;
+  border-top: 1px solid #f1f5f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------
+   FOOTER SIMPLE WRAPPER
+   ----------------------------------------- */
+.footer-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 1.25rem;
+}
+
+/* -----------------------------------------
+   ROW 1: BRAND + HORIZONTAL NAV
+   ----------------------------------------- */
+.footer-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* BRAND TITLE */
+.brand-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 850;
+  color: #000000;
+  letter-spacing: -0.03em;
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* HORIZONTAL NAV LINKS */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-nav a {
+  font-size: 0.88rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer-nav a:hover {
+  color: #ff6600;
+}
+
+/* -----------------------------------------
+   DIVIDER LINE
+   ----------------------------------------- */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.15rem 0;
+}
+
+/* -----------------------------------------
+   ROW 2: ADDRESS + EMAIL + WHATSAPP
+   ----------------------------------------- */
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #1e293b;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover {
+  color: #ff6600;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+  color: #000000;
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover svg {
+  color: #ff6600;
+}
+
+.contact-whatsapp:hover {
+  color: #25d366;
+}
+
+.contact-whatsapp:hover svg {
+  color: #25d366;
+}
+
+.contact-divider {
+  width: 1px;
+  height: 16px;
+  background-color: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------
+   GIANT WATERMARK TEXT & OVERLAY BAR
+   ----------------------------------------- */
+.footer-bottom-watermark-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.giant-watermark-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(3.6rem, 11.8vw, 11rem);
+  font-weight: 900;
+  color: #000;
+  opacity: 0.92;
+  letter-spacing: -0.04em;
+  line-height: 0.82;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  width: 100%;
+}
+
+.watermark-overlay-bar {
+  position: absolute;
+  bottom: 14%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.copyright-text {
+  font-size: clamp(0.72rem, 0.92vw, 0.84rem);
+  font-weight: 750;
+  color: #ff6600;
+  letter-spacing: -0.01em;
+}
+
+.motto-tagline {
+  font-size: clamp(0.72rem, 0.92vw, 0.84rem);
+  font-weight: 750;
+  color: #1e293b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* -----------------------------------------
+   RESPONSIVE: TABLET (≤ 900px)
+   ----------------------------------------- */
+@media (max-width: 900px) {
+  .footer-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.15rem;
+  }
+
+  .footer-nav {
+    justify-content: flex-start;
+    gap: 0.85rem;
+  }
+
+  .footer-contact-row {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* -----------------------------------------
+   RESPONSIVE: SMALL TABLET (≤ 768px)
+   ----------------------------------------- */
+@media (max-width: 768px) {
+  .footer-bottom-watermark-wrap {
+    margin-top: 1rem;
+  }
+
+  .watermark-overlay-bar {
+    position: relative;
+    bottom: auto;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .giant-watermark-text {
+    line-height: 0.95;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .contact-divider {
+    display: none;
+  }
+}
+
+/* -----------------------------------------
+   RESPONSIVE: MOBILE (≤ 600px)
+   ----------------------------------------- */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 2rem 1.25rem 0.75rem;
+  }
+
+  .footer-nav {
+    gap: 0.7rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.82rem;
+  }
+
+  .contact-item {
+    font-size: 0.8rem;
+  }
+}
+
+/* -----------------------------------------
+   RESPONSIVE: VERY SMALL MOBILE (≤ 380px)
+   ----------------------------------------- */
+@media (max-width: 380px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+}

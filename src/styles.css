@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* ========================
+   GLOBAL RESETS & BASE
+   ======================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Utility: letter spacing */
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}

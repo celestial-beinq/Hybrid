@@ -1,0 +1,113 @@
+<main class="academics-page-main">
+
+  <!-- ═══════════════════════════════════════════════════════
+       1. FULL-VIEWPORT HERO (HOME PAGE STYLE WITH INTEGRATED FLOATING NAV)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="acad-hero">
+    <div class="acad-hero-bg" style="background-image: url('images/IMG_4339.JPG')"></div>
+    <div class="acad-hero-overlay"></div>
+
+    <!-- FLOATING NAVBAR AS PART OF THE HERO -->
+    <app-navbar></app-navbar>
+
+    <div class="acad-hero-content-wrapper">
+      <div class="acad-hero-content">
+     
+      <h1 class="acad-hero-title">
+        Excellence in Learning,
+        <br>
+        <span class="title-highlight">Character &amp; Purpose</span>
+      </h1>
+      <p class="acad-hero-subtext">
+        At HYBRID SCHOOLS, we believe that true education goes beyond the classroom. Our academic programme is designed to develop confident, knowledgeable and responsible young people who are prepared to succeed in a rapidly changing world.
+      </p>
+      <div class="acad-hero-actions">
+        <a routerLink="/contact" class="btn-hero-primary">
+          Apply for Admission
+        </a>
+        <a routerLink="/contact" class="btn-hero-secondary">
+          Contact the School
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+    </div>
+
+   
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       2. OUR ACADEMIC APPROACH
+       ═══════════════════════════════════════════════════════ -->
+  <section class="approach-section">
+    <div class="container">
+      <div class="approach-grid">
+        <div class="approach-left">
+          <span class="section-eyebrow">OUR APPROACH</span>
+          <h2 class="section-heading">Our Academic Approach</h2>
+          <p class="approach-body">
+            Our approach to teaching is centred on the individual learner. We recognise that every child is unique, with different abilities, interests and learning needs.
+          </p>
+          <p class="approach-body">
+            Our teachers use a combination of proven teaching methods, classroom activities, practical experiences and appropriate technology to make learning meaningful and engaging. We encourage pupils and students to ask questions, think independently, solve problems and apply what they learn to real-life situations.
+          </p>
+          <p class="approach-body">
+            We also maintain high academic standards while ensuring that our students develop the confidence, discipline and values needed to become responsible members of society.
+          </p>
+        </div>
+        <div class="approach-right">
+          <div class="approach-image-frame">
+            <img src="images/IMG_4344.JPG" alt="Students learning at HYBRID SCHOOLS" loading="lazy" class="approach-img">
+            <div class="approach-float-badge">
+              <span class="float-num">15+</span>
+              <span class="float-txt">Years of Academic Excellence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       5. EXAMINATION PREPARATION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="exams-section">
+    <div class="container">
+      <div class="exams-box">
+        <div class="exams-left">
+          <span class="section-eyebrow text-cyan">EXAMINATION PREPARATION</span>
+          <h2 class="exams-heading">Thorough Preparation for Academic Success</h2>
+          <p class="exams-body">
+            We prepare our students thoroughly for both internal assessments and recognised external examinations. Our approach goes beyond examination drills students are taught to understand concepts, apply knowledge and develop effective study habits.
+          </p>
+          <p class="exams-body">
+            Regular assessments, revision programmes and academic support help us identify areas for improvement and ensure that students are adequately prepared.
+          </p>
+        </div>
+        <div class="exams-right">
+          <h4 class="exams-list-title">Recognised External Examinations</h4>
+          <ul class="exams-list">
+            <li *ngFor="let exam of examinations">
+              <div class="exam-check">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <span>{{ exam }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+</main>
+
+<app-footer></app-footer>

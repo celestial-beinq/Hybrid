@@ -1,0 +1,60 @@
+<main class="gallery-page-main">
+
+  <!-- ═══════════════════════════════════════════════════════
+       GALLERY HERO (WITH INTEGRATED FLOATING NAVBAR)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="gallery-hero">
+    <!-- BACKGROUND PHOTO & OVERLAY -->
+    <div class="gallery-hero-bg" style="background-image: url('images/IMG_4342.JPG')"></div>
+    <div class="gallery-hero-overlay"></div>
+
+    <!-- FLOATING NAVBAR AS PART OF HERO -->
+    <app-navbar></app-navbar>
+
+    <div class="gallery-hero-content-wrapper">
+      <div class="container gallery-hero-container">
+        <!-- HERO BADGE -->
+
+
+        <!-- LARGE BOLD HEADLINE -->
+        <h1 class="gallery-hero-title">
+          SCHOOL LIFE &amp;
+          <br>
+          <span class="title-highlight">GALLERY ARCHIVE</span>
+        </h1>
+
+        <p class="gallery-hero-subtext">
+          Explore everyday life at HYBRID SCHOOLS in Iyana - Ejigbo, Lagos State — from exhilarating sports tournaments
+          and debate triumphs to ground-breaking science experiments.
+        </p>
+
+        <!-- TILTED BADGE WITH ARROW AND SWOOSH -->
+        <div class="portal-badge-container">
+          <a routerLink="/contact" class="portal-sticker-badge">
+            <span class="badge-pill">EXPERIENCE SCHOOL IN PERSON</span>
+            <span class="badge-arrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- PLAYFUL HAND-DRAWN SWOOSH LINE -->
+          <svg class="badge-swoosh-doodle" width="70" height="46" viewBox="0 0 70 46" fill="none" aria-hidden="true">
+            <path d="M 2 24 C 16 38, 42 42, 54 22 C 60 11, 48 2, 40 8 C 34 13, 38 24, 52 18 C 58 15, 62 10, 60 4"
+              stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <app-gallery></app-gallery>
+
+</main>
+
+<app-footer></app-footer>

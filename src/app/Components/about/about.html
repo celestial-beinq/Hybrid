@@ -1,0 +1,53 @@
+<section class="about-section" id="about">
+  <!-- TOP EDITORIAL STATEMENT -->
+  <div class="statement-container">
+    <p class="editorial-statement">
+      <span class="statement-strong">Situated in a serene, secure environment in Lagos, our campus blends the rigorous Nigerian national curriculum with international British standards, modern STEM laboratories, and rich co-curricular facilities.</span>
+      <span class="statement-muted"> We are committed to nurturing disciplined, self-reliant scholars who achieve stellar distinctions in WAEC, NECO, and Cambridge IGCSE, while cultivating the moral integrity and leadership needed for global success.</span>
+    </p>
+  </div>
+
+
+  <!-- MISSION, VISION & VALUES PILLARS COMPONENT -->
+  <app-pillars></app-pillars>
+
+
+  <app-facilities></app-facilities>
+
+  <!-- WHY CHOOSE SECTION -->
+  <div class="why-choose-container">
+    <div class="why-choose-header">
+      <div class="header-left">
+        <span class="eyebrow-tag">WHY US</span>
+        <h2 class="section-title">Why Families in Lagos Choose <br> HYBRID SCHOOLS</h2>
+        <p class="section-subtitle">
+          Six compelling reasons forward-thinking parents and ambitious students trust us for world-class secondary education.
+        </p>
+      </div>
+
+      <div class="header-right">
+        <a routerLink="/apply" class="btn-enroll-spot">
+          <span>APPLY FOR ADMISSION</span>
+          <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- 6 CARDS GRID -->
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let item of features">
+        <div class="card-icon-box">
+          <i [class]="'bi ' + item.icon"></i>
+        </div>
+        <h3 class="card-title">{{ item.title }}</h3>
+        <p class="card-description">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION, VISION & VALUES SECTION (NO IMAGES, INSPIRED BY SHOWCASE DESIGN) -->
+ 
+</section>

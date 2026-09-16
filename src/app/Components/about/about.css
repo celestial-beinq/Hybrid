@@ -1,0 +1,468 @@
+/* =========================================
+   ABOUT & WHY CHOOSE HYBRID SCHOOLS SECTION
+   ========================================= */
+
+.about-section {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+}
+
+/* -----------------------------------------
+   1. TOP EDITORIAL STATEMENT
+   ----------------------------------------- */
+.statement-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vh, 6.5rem) 1.5rem clamp(3rem, 5vh, 4.5rem);
+  text-align: center;
+}
+
+.editorial-statement {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.statement-strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.statement-muted {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* -----------------------------------------
+   2. WHY CHOOSE SECTION WRAPPER
+   ----------------------------------------- */
+.why-choose-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem clamp(4rem, 7vh, 6rem);
+}
+
+/* HEADER WITH TITLE & CTA */
+.why-choose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: center;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.header-left {
+  max-width: 680px;
+}
+
+.eyebrow-tag {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 0.6rem 0;
+}
+
+.section-subtitle {
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* CTA BUTTON (Yellow Accent) */
+.header-right {
+  flex-shrink: 0;
+}
+
+.btn-enroll-spot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background-color: #ff6600;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.45rem;
+  border-radius: 0px;
+  transition: all 0.22s ease-in-out;
+  box-shadow: 0 2px 6px rgba(250, 204, 21, 0.2);
+}
+
+.btn-enroll-spot:hover {
+  background-color: #ff6600;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(250, 204, 21, 0.35);
+}
+
+.arrow-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-enroll-spot:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* -----------------------------------------
+   3. FEATURES GRID & CARDS
+   ----------------------------------------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #eef2f6;
+  border-radius: 0px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background 0.25s ease;
+}
+
+.feature-card:hover {
+  background: #ffffff;
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.07);
+}
+
+/* ICON BOX */
+.card-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #ff6600;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.35rem;
+  transition: transform 0.22s ease, background-color 0.22s ease;
+}
+
+.card-icon-box i {
+  color: #fff;
+  font-size: 1.2rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+.feature-card:hover .card-icon-box {
+  transform: scale(1.06);
+  background-color: #000000;
+}
+
+/* CARD TYPOGRAPHY */
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.55rem 0;
+  line-height: 1.3;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* -----------------------------------------
+   4. MISSION, VISION & VALUES (PILLARS)
+   ----------------------------------------- */
+.pillars-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vh, 4rem) 1.5rem clamp(4.5rem, 8vh, 7rem);
+}
+
+.pillars-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.pillars-header-title-wrap {
+  flex-shrink: 0;
+}
+
+.pillars-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ff6600;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.pillars-main-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.pillars-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin-bottom: 0.35rem;
+}
+
+/* PILLARS GRID */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
+  padding: 1.5rem 0.5rem 2.5rem;
+}
+
+/* CARD ARCHITECTURE (No images, pure typography & geometry) */
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0px;
+  padding: 2.2rem 1.85rem 1.6rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  position: relative;
+}
+
+/* DYNAMIC SUBTLE POLAROID OFFSETS ON DESKTOP */
+@media (min-width: 993px) {
+  .card-mission {
+    transform: rotate(-5.2deg);
+  }
+
+  .card-vision {
+    transform: translateY(20px);
+  }
+
+  .card-values {
+    transform: rotate(4.2deg);
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-8px) rotate(0deg) scale(1.02);
+    box-shadow: 0 24px rgba(255, 102, 0, 0.12);
+    border-color: #ff6600;
+    z-index: 5;
+  }
+}
+
+.pillar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.pillar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px dashed #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: #f0f7ff;
+  color: #ff6600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+.pillar-index {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #cbd5e1;
+  font-family: monospace, sans-serif;
+  line-height: 1;
+}
+
+.pillar-body {
+  flex: 1;
+}
+
+.pillar-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.25;
+}
+
+.pillar-text {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+}
+
+/* CORE VALUES PILLS */
+.values-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+}
+
+.value-pill {
+  font-size: 0.76rem;
+  font-weight: 600;
+  background-color: #f8fafc;
+  color: #0f172a;
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.pillar-card:hover .value-pill {
+  background-color: #f0f7ff;
+  border-color: #bfdbfe;
+  color: #ff6600;
+}
+
+/* FOOTER META (Inspired by the date stamps in reference) */
+.pillar-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.pillar-meta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* -----------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   ----------------------------------------- */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .why-choose-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .header-right {
+    width: 100%;
+  }
+
+  .btn-enroll-spot {
+    width: auto;
+  }
+
+  .pillars-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pillars-divider-line {
+    width: 100%;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .pillar-card {
+    padding: 1.85rem 1.5rem 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .statement-container {
+    padding: 3.5rem 1.25rem 2.5rem;
+  }
+
+  .editorial-statement {
+    text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  .why-choose-container {
+    padding: 0 1.25rem 4rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem 1.35rem;
+  }
+
+  .btn-enroll-spot {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pillars-container {
+    padding: 1.5rem 1.25rem 4rem;
+  }
+
+  .pillars-main-title {
+    font-size: 1.85rem;
+  }
+}

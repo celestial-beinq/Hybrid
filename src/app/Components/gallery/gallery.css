@@ -1,0 +1,266 @@
+/* =========================================
+   SCHOOL GALLERY COMPONENT
+   ========================================= */
+
+.gallery-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(4.5rem, 8vh, 7rem) 1.5rem clamp(5rem, 8vh, 7.5rem);
+  color: #0f172a;
+}
+
+.gallery-container {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------
+   HEADER & FILTER TABS
+   ----------------------------------------- */
+.gallery-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto clamp(2.5rem, 4vw, 3.8rem);
+}
+
+.gallery-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ff6600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-main-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 900;
+  color: #0a0a0a;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin: 0 0 0.75rem 0;
+}
+
+.gallery-subtitle {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+/* FILTER TABS */
+.gallery-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.filter-tab-btn {
+  background-color: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 0px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.6rem 1.15rem;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.filter-tab-btn:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.filter-tab-btn.active {
+  background-color: #ff6600;
+  color: #ffffff;
+  border-color: #ff6600;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
+}
+
+/* -----------------------------------------
+   PHOTO BENTO / MASONRY GRID
+   ----------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 240px;
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 0px;
+  background-color: #f1f5f9;
+}
+
+.gallery-item.span-tall {
+  grid-row: span 2;
+}
+
+.gallery-item.span-wide {
+  grid-column: span 2;
+}
+
+.gallery-image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover .gallery-image-box img {
+  transform: scale(1.06);
+}
+
+/* HOVER OVERLAY */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  transition: opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-category-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffea00;
+  margin-bottom: 0.3rem;
+}
+
+.gallery-card-heading {
+  font-size: 0.95rem;
+  font-weight: 750;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* -----------------------------------------
+   SCHOOL TOUR BANNER
+   ----------------------------------------- */
+.campus-tour-banner {
+  margin-top: 3.5rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 2.2rem 2.5rem;
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-left: 5px solid #ff6600;
+}
+
+.banner-title {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 800;
+  margin: 0 0 0.35rem 0;
+}
+
+.banner-text {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.btn-banner-tour {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background-color: #facc15;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.76rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.22s ease;
+}
+
+.btn-banner-tour:hover {
+  background-color: #eab308;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.35);
+}
+
+/* -----------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   ----------------------------------------- */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item.span-wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .campus-tour-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .btn-banner-tour {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-section {
+    padding: 3.5rem 1.25rem 4rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+
+  .gallery-item.span-tall {
+    grid-row: span 1;
+  }
+
+  .gallery-item.span-wide {
+    grid-column: span 1;
+  }
+}

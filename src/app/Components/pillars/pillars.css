@@ -1,0 +1,209 @@
+/* =========================================
+   MISSION, VISION & VALUES (PILLARS)
+   ========================================= */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.pillars-section-wrapper {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.pillars-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vh, 4rem) 1.5rem clamp(4.5rem, 8vh, 7rem);
+}
+
+.pillars-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.pillars-header-title-wrap {
+  flex-shrink: 0;
+}
+
+.pillars-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ff6600;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.pillars-main-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.pillars-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin-bottom: 0.35rem;
+}
+
+/* PILLARS GRID */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
+  padding: 1.5rem 0.5rem 2.5rem;
+}
+
+/* CARD ARCHITECTURE (No images, pure typography & geometry) */
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0px;
+  padding: 2.2rem 1.85rem 1.6rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  position: relative;
+}
+
+/* DYNAMIC SUBTLE POLAROID OFFSETS ON DESKTOP */
+@media (min-width: 993px) {
+  .card-mission {
+    transform: rotate(-5.2deg);
+  }
+
+  .card-vision {
+    transform: translateY(20px);
+  }
+
+  .card-values {
+    transform: rotate(4.2deg);
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-8px) rotate(0deg) scale(1.02);
+    box-shadow: 0 24px 45px rgba(255, 102, 0, 0.12);
+    border-color: #ff6600;
+    z-index: 5;
+  }
+}
+
+.pillar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.pillar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px dashed #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: #f0f7ff;
+  color: #ff6600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+.pillar-index {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #cbd5e1;
+  font-family: monospace, sans-serif;
+  line-height: 1;
+}
+
+.pillar-body {
+  flex: 1;
+}
+
+.pillar-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.25;
+}
+
+.pillar-text {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+}
+
+/* FOOTER META */
+.pillar-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.pillar-meta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 992px) {
+  .pillars-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pillars-divider-line {
+    width: 100%;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .pillar-card {
+    padding: 1.85rem 1.5rem 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pillars-container {
+    padding: 1.5rem 1.25rem 4rem;
+  }
+
+  .pillars-main-title {
+    font-size: 1.85rem;
+  }
+}
