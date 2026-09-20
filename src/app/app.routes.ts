@@ -6,12 +6,12 @@ import { GalleryPage } from './Pages/gallery/gallery';
 import { ContactPage } from './Pages/contact/contact';
 
 export const routes: Routes = [
+  { path: '', component: Home },
   { path: 'home', component: Home },
   { path: 'about', component: AboutPage },
   { path: 'academics', component: AcademicsPage },
   { path: 'gallery', component: GalleryPage },
   { path: 'contact', component: ContactPage },
   { path: 'apply', redirectTo: 'contact', pathMatch: 'full' },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
